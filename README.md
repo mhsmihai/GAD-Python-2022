@@ -1,1 +1,1 @@
-# GoogleGrupa5
+# GAD Python 2022 - labs & some projects
