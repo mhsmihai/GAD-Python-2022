@@ -13,9 +13,9 @@
                     <a class="btn" href="{% url 'logout' %}">Logout</a>
                     <span>Hi, {{ request.user.username|upper }}</span>
                     {% if ready_to_work is False %}
-                        <a href="{% url 'userprofile:stop_pontaj' %}" class="btn btn-danger">Oprire Pontaj</a>
+                        <a href="{% url 'userprofile:stop_pontaj' %}" class="btn btn-danger">Oprire pontaj</a>
                     {% else %}
-                        <a href="{% url 'userprofile:start_pontaj' %}" class="btn btn-success">Pornire Pontaj</a>
+                        <a href="{% url 'userprofile:start_pontaj' %}" class="btn btn-success">Pornire pontaj</a>
                     {% endif %}
                 {% endif %}
             </nav>

@@ -1,6 +1,8 @@
 from user_profile.models import Logs
 
+
 class LogsMiddleware:
+
     def __init__(self, get_response):
         self.get_response = get_response
 
