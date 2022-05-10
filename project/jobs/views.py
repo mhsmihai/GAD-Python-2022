@@ -14,7 +14,7 @@ class JobsView(LoginRequiredMixin, ListView):
 
 class CreateJobsView(LoginRequiredMixin, CreateView):
     model = Jobs
-    fields = ['type', 'url', 'title']
+    fields = ['type', 'url', 'title', 'description', 'how_to_apply']
     template_name = 'jobs/jobs_form.html'
 
     def get_success_url(self):
@@ -23,7 +23,7 @@ class CreateJobsView(LoginRequiredMixin, CreateView):
 
 class UpdateJobsView(LoginRequiredMixin, UpdateView):
     model = Jobs
-    fields = ['type', 'url', 'title']
+    fields = ['type', 'url', 'title', 'description', 'how_to_apply']
     template_name = 'jobs/jobs_form.html'
 
     def get_success_url(self):

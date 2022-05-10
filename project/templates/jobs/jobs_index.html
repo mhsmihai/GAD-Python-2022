@@ -14,7 +14,7 @@
         </tr>
         </thead>
         <tbody>
-        {% for item in jobs_jobs %}
+        {% for item in jobs_list %}
             <tr>
                 <td>{{ forloop.counter }}</td>
                 <td>{{ item.type }}</td>
@@ -31,9 +31,9 @@
                 <td>
                         <a href="{% url 'jobs:modifica' item.id %}" class="btn btn-success">Modifica</a>
                     {% if item.active == 1 %}
-                        <a href="{% url 'jobs:sterge' item.id %}" class="btn btn-danger">Sterge</a>
+                        <a href="{% url 'jobs:dezactiveaza' item.id %}" class="btn btn-danger">Sterge</a>
                     {% else %}
-                        <a href="{% url 'jobs:dezactiveaza' item.id %}" class="btn btn-info">Dezactiveaza</a>
+                        <a href="{% url 'jobs:activeaza' item.id %}" class="btn btn-info">Activeaza</a>
                     {% endif %}
                 </td>
             </tr>

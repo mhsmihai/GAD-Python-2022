@@ -20,6 +20,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=100)),
                 ('description', models.TextField(max_length=150)),
                 ('how_to_apply', models.TextField(max_length=150)),
+                ('active', models.BooleanField(default=1)),
             ],
         ),
     ]

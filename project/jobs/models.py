@@ -8,6 +8,7 @@ class Jobs(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=150)
     how_to_apply = models.TextField(max_length=150)
+    active = models.BooleanField(default=1)
 
     def __str__(self):
         return f"{self.type} - {self.title} - {self.url}"
